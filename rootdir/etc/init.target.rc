@@ -359,13 +359,7 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     rlimit rtprio 10 10
     ioprio rt 4
     task_profiles ProcessCapacityHigh HighPerformance
-    onrestart restart audioserver
-    
-service vendor.power /vendor/bin/hw/android.hardware.power-service-qti
-    override
-    class hal
-    user system
-    group system input    
+    onrestart restart audioserver   
 
 on property:vendor.post_boot.parsed=1
     # Disable process_reclaim
